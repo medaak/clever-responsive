@@ -1,0 +1,180 @@
+@charset "UTF-8"; // Ajouter vos style SCSS ici
+// --------------------------
+/// Générez un guide des styles
+//
+// Si vous commentez votre code en utilisant la syntaxe
+// [KSS](https://github.com/kss-node/kss/blob/spec/SPEC.md),
+// le Starter Kit generera un guide des styles dans la
+// documentation a chaque build du projet.
+//
+// Styleguide Introduction
+/// Une palette de couleur
+//
+// Si vous voulez documenter des couleurs, vous pouvez
+// le faire de cette manière grace au block Colors.
+//
+// Colors:
+// denim          : #1e5bc6
+// flamingo       : #f15145
+// alert          : #f33121 - red for error
+// $color-black   : #000    - real black
+//
+// Styleguide Introduction.Couleur
+/// Font d’icon Fontello
+//
+// De la même façon que pour les fonts grâce au block
+// Icons vous pouvez documenter les icons de la font.
+//
+// Implique que la font d’icon se nomme fontello
+// Sinon il faut changer celle-ci dans doc.scss
+//
+// Icons:
+// left    : ←
+// up      : ↑
+// right   : →
+// down    : ↓
+// comment : 💬 - bulle
+//
+// Styleguide Introduction.Icons
+/// Exemple UI
+//
+// Markup: ../html/partials/_exemple.twig
+//
+// Styleguide Introduction.UI
+/// SVG
+//
+// Markup:
+// <svg style="height:120px;width:120px;fill:#000">
+//   <use xlink:href="#symbol-fish"/>
+// </svg>
+//
+// Styleguide Introduction.Svg
+@import 'responsive-nav/responsive-nav.css';
+
+* {}
+
+body {
+  background-color: #2A3132;
+  font: 1em sans-serif;
+  padding: 0!important !important;
+}
+
+h1 {
+  text-align: center;
+  color: #3286a4;
+  font-size: 6em;
+  width: 60%;
+}
+
+.logo {
+  width: 40%;
+}
+
+nav {
+  background-color: #763626;
+  width: 100%;
+}
+
+a {
+  color: #90AFC5;
+  font-size: 3em;
+  text-decoration: none;
+}
+
+.nav-collapse li {
+  display: inline-block;
+  list-style: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: auto;
+}
+
+.principal {
+  background-color: #3286a4;
+  color: #2A3132;
+  font-size: 1.5rem;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.cookiessvg {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.principal-svg {
+  margin: auto;
+  width: 100%;
+}
+
+.principal-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.principal-video embed,
+.principal-video iframe,
+.principal-video object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.secondary {
+  background-color: #3286a4;
+  color: #2A3132;
+  font-size: 1.5rem;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.foodimage {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.food {
+  height: auto;
+  width: 100%;
+}
+@media screen and (min-width: 75em) {
+  /* Vos styles pour les grands écrans ici */
+  .content {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: row;
+  }
+
+  a {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  li {
+    border-right: solid #3286a4;
+  }
+
+  li:last-child {
+    border-right: none;
+  }
+
+  .principal {
+    width: 50%;
+    margin: 2em;
+    padding: 2em;
+  }
+
+  .secondary {
+    width: 50%;
+    margin: 2em;
+    padding: 2em;
+  }
+}
